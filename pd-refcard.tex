@@ -21,7 +21,7 @@
   urlcolor = black
 }
 
-
+\newcommand{\audio}{\raisebox{-0.7mm}[0mm][0.1mm]{\~\}}
 \newcommand{\email}[1]{\href{mailto:#1}{\textsf{#1}}}
 \newcommand{\refcardtitle}[1]{
   \begin{center}
@@ -139,81 +139,81 @@
 
   \refcardtitle{Audio Math}
   \begin{tabularx}{9cm}{>{\tt}l X}
-  	expr\~\ fexpr\~\ & C-style expressions \\
-    +\~\ -\~\ *\~\ /\~\ & arithmetic on audio signals \\
-    max\~\ min\~\ & maximum or minimum of 2 inputs \\
-    clip\~\ & constrict signal to lie between two bounds \\
-    sqrt\~\ & approximate (16-bit) square root \\
-    rsqrt\~\ & reciprocal square root \\
-    q8\_rsqrt\~\ q8\_sqrt\~\ & fast, cheap 8 bits versions \\
-    wrap\~\ & wraparound (fractional part) \\
-    fft\~\ & complex forward discrete Fourier transform \\
-    ifft\~\ & complex inverse discrete Fourier transform \\
-    rfft\~\ & real forward discrete Fourier transform \\
-    rifft\~\ & real inverse discrete Fourier transform \\
-    pow\~\ log\~\ exp\~\ abs\~\ & math\\
-    framp\~\ & output a ramp for each block \\
+  	expr\audio fexpr\audio & C-style expressions \\
+    +\audio -\audio *\audio /\audio & arithmetic on audio signals \\
+    max\audio min\audio & maximum or minimum of 2 inputs \\
+    clip\audio & constrict signal to lie between two bounds \\
+    sqrt\audio & approximate (16-bit) square root \\
+    rsqrt\audio & reciprocal square root \\
+    q8\_rsqrt\audio q8\_sqrt\audio & fast, cheap 8 bits versions \\
+    wrap\audio & wraparound (fractional part) \\
+    fft\audio & complex forward discrete Fourier transform \\
+    ifft\audio & complex inverse discrete Fourier transform \\
+    rfft\audio & real forward discrete Fourier transform \\
+    rifft\audio & real inverse discrete Fourier transform \\
+    pow\audio log\audio exp\audio abs\audio & math\\
+    framp\audio & output a ramp for each block \\
   \end{tabularx}
   \begin{tabularx}{9cm}{>{\tt}l X}
-    mtof\~\ ftom\~\ rmstodb\~\ dbtorms\~\ & acoustic conversions \\
+    mtof\audio ftom\audio rmstodb\audio dbtorms\audio & acoustic conversions \\
   \end{tabularx}
 
   \refcardtitle{General Audio Manipulation}
   \begin{tabularx}{9cm}{>{\tt}l X}
-    dac\~\ & audio output \\
-    adc\~\ & audio input \\ 
-    sig\~\ & convert numbers to audio signals \\ 
-    line\~\ & generate audio ramps \\ 
-    vline\~\ & deluxe \texttt{line\~} \\ 
-    threshold\~\ & detect signal thresholds \\
-    snapshot\~\ & sample a signal (convert it back to a number) \\
-    vsnapshot\~\ & deluxe \texttt{snapshot\~} \\
-    bang\~\ & send a bang message after each DSP block \\
-    samplerate\~\ & get the sample rate \\
-    send\~\ & nonlocal signal connection with fanout \\
-    receive\~\ & get signal from \texttt{send\~} \\
-    throw\~\ & add to a summing bus \\
-    catch\~\ & define and read a summing bus \\
-    readsf\~\ & soundfile playback from disk \\
-    writesf\~\ & record sound to disk \\
+    dac\audio & audio output \\
+    adc\audio & audio input \\ 
+    sig\audio & convert numbers to audio signals \\ 
+    line\audio & generate audio ramps \\ 
+    vline\audio & deluxe \texttt{line\~} \\ 
+    threshold\audio & detect signal thresholds \\
+    snapshot\audio & sample a signal (convert it back to a number) \\
+    vsnapshot\audio & deluxe \texttt{snapshot\~} \\
+    bang\audio & send a bang message after each DSP block \\
+    samplerate\audio & get the sample rate \\
+    send\audio & nonlocal signal connection with fanout \\
+    receive\audio & get signal from \texttt{send\~} \\
+    throw\audio & add to a summing bus \\
+    catch\audio & define and read a summing bus \\
+    readsf\audio & soundfile playback from disk \\
+    writesf\audio & record sound to disk \\
   \end{tabularx}
   
   \refcardtitle{Audio Oscillators and Tables}
   \begin{tabularx}{9cm}{>{\tt}l X}
-    phasor\~\ & sawtooth oscillator \\
-    cos\~\ & cosine \\
-    osc\~\ & cosine oscillator \\
-    tabwrite\~\ & write to a table \\
-    tabplay\~\ & play back from a table (non-transposing) \\
-    tabread\~\ & non-interpolating table read \\
-    tabread4\~\ & four-point interpolating table read \\
-    tabosc4\~\ & wavetable oscillator \\ 
-    tabsend\~\ & write one block continuously to a table \\
-    tabreceive\~\ & read one block continuously from a table \\
+    phasor\audio & sawtooth oscillator \\
+    cos\audio & cosine \\
+    osc\audio & cosine oscillator \\
+    tabwrite\audio & write to a table \\
+    tabplay\audio & play back from a table (non-transposing) \\
+    tabread\audio & non-interpolating table read \\
+    tabread4\audio & four-point interpolating table read \\
+    tabosc4\audio & wavetable oscillator \\ 
+    tabsend\audio & write one block continuously to a table \\
+    tabreceive\audio & read one block continuously from a table \\
   \end{tabularx}
   
   \refcardtitle{Audio Filters}
   \begin{tabularx}{9cm}{>{\tt}l X}
-    vcf\~\ & voltage controlled filter \\
-    noise\~\ &  white noise generator \\
-    env\~\ & envelope follower (RMS amplitude in dB) \\
-    hip\~\ &  high pass filter \\
-    lop\~\ &  low pass filter \\ 
-    bp\~\ &  band pass filter \\
-    biquad\~\ & raw filter (2 poles and 2 zeros)\\ 
-    samphold\~\ & sample and hold unit \\
-    print\~\ & print out one or more "blocks" \\
-    rpole\~\ & raw real-valued one-pole filter \\
-    rzero\~\ & raw real-valued one-zero filter \\
-    rzero\_rev\~\ & time-reversed \texttt{rzero\~} \\
+    vcf\audio & voltage controlled filter \\
+    noise\audio &  white noise generator \\
+    env\audio & envelope follower (RMS amplitude in dB) \\
+    hip\audio &  high pass filter \\
+    lop\audio &  low pass filter \\ 
+    bp\audio &  band pass filter \\
+    biquad\audio & raw filter (2 poles and 2 zeros)\\ 
+    samphold\audio & sample and hold unit \\
+    print\audio & print out one or more "blocks" \\
+    rpole\audio & raw real-valued one-pole filter \\
+    rzero\audio & raw real-valued one-zero filter \\
+    rzero\_rev\audio & time-reversed \texttt{rzero\~} \\
   \end{tabularx}
   \texttt{cpole\~, czero\~, czero\_rev\~} corresponding complex-valued filters
 
   \refcardtitle{Audio Delay}
   \begin{tabularx}{9cm}{>{\tt}l X}
-    delwrite\~\ & write to a delay line \\
-    delread\~\ & read from a delay line \\
-    delread4\~\ vd\~\ & read with a time-varying delay time \\
+    delwrite\audio & write to a delay line \\
+    delread\audio & read from a delay line \\
+    delread4\audio vd\audio & read with a time-varying delay time \\
   \end{tabularx}
   
   \refcardtitle{Subwindows}
@@ -221,9 +221,9 @@
     pd & define a subwindow \\
     inlet & add an inlet to a pd \\
     outlet & add an outlet to a pd \\
-    inlet\~\, outlet\~\ & signal versions of \texttt{inlet} and \texttt{outlet} \\
+    inlet\audio, outlet\audio & signal versions of \texttt{inlet} and \texttt{outlet} \\
     clone & make copies of a subpatch \\
-    block\~\ switch & specify block size and overlap, or, if invoked as "switch", also switch subpatches on and off \\
+    block\audio switch & specify block size and overlap, or, if invoked as "switch", also switch subpatches on and off \\
   \end{tabularx}
 
   \refcardtitle{Data Templates}
@@ -248,17 +248,17 @@
     scalar & create a single scalar \\
   \end{tabularx}
   
-  \refcardtitle{Extra (patches and externals in pd/extra)}
+  \refcardtitle{Extra (abstractions and externals in pd/extra)}
   \begin{tabularx}{9cm}{>{\tt}l X}
-  	sigmund\~\ & pitch tracker \\
-  	bonk\~\ & attack detector \\
+  	sigmund\audio & pitch tracker \\
+  	bonk\audio & attack detector \\
   	choice & best match of list to templates \\
-  	hilbert\~\ complex-mod\~\ & phase quadrature / frequency shifting \\
-  	loop\~\ & phasor\~\ with S/H on its frequency input\\
-  	lrshift\~\ & left and right shift (useful with FFT objects) \\
-  	pd\~\ stout & run another copy of Pd (for multiprocessing) \\ 
-  	rev1\~\ rev2\~\ rev3\~\ & reverberators \\
-  	bob\~\ & Moog resonant filter model \\
+  	hilbert\audio complex-mod\audio & phase quadrature / frequency shifting \\
+  	loop\audio & phasor\audio with S/H on its frequency input\\
+  	lrshift\audio & left and right shift (useful with FFT objects) \\
+  	pd\audio stout & run another copy of Pd (for multiprocessing) \\ 
+  	rev1\audio rev2\audio rev3\audio & reverberators \\
+  	bob\audio & Moog resonant filter model \\
   	
   \end{tabularx}
   
